@@ -1,0 +1,173 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('./aeroplane.webp') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+/* .container:hover {
+    background: rgba(255, 255, 255, 0.9);
+} */
+
+.header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+/* .container:hover .header h1 {
+    color: #333;
+} */
+
+.search-box {
+    padding: 20px;
+}
+
+.search-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trip-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.input-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.input-fields > div {
+    flex: 1;
+    min-width: 150px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f7f7f7;
+    color: #333;
+}
+
+button {
+    background-color: #f77f00;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* button:hover {
+    background-color: #ffb703;
+} */
+
+.direct {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.direct input {
+    margin-left: 10px;
+}
+
+label {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* .container:hover label {
+    color: #333;
+} */
+
+
+.result {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.result p {
+    margin-bottom: 10px;
+}
+
+.result strong {
+    font-weight: bold;
+}
+
+.back {
+    text-align: center;
+}
+
+.back .button {
+    display: inline-block;
+    background-color: #f77f00;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* .back .button:hover {
+    background-color: #ffb703;
+} */
+
+
+.result-box {
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    color: #fff; /* Light text color */
+}
+
+.result-box h2 {
+    font-size: 2rem;
+    color: #fff; /* Light text for the title */
+    margin-bottom: 15px;
+}
+
+.result-box p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #ddd; /* Slightly lighter text for the content */
+}
+

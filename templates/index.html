@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Fare Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Millions of cheap flights with just one search!</h1>
+        </div>
+        <div class="search-box">
+            <form id="flightForm" action="/predict" method="POST">
+                <div class="input-fields">
+                    <div>
+                        <label for="airline">Airline</label>
+                        <select name="airline" id="airline" required>
+                            {% for option in unique_values.airline %}
+                                <option value="{{ option }}">{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="source_city">From</label>
+                        <select name="source_city" id="source_city" required>
+                            {% for option in unique_values.source_city %}
+                                <option value="{{ option }}">{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="destination_city">To</label>
+                        <select name="destination_city" id="destination_city" required>
+                            {% for option in unique_values.destination_city %}
+                                <option value="{{ option }}">{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="departure_date">Departure Date</label>
+                        <input type="date" name="departure_date" id="departure_date" required 
+                               min="{{ current_date }}">
+                    </div>
+                    <div>
+                        <label for="departure_time">Departure Time (HH:MM)</label>
+                        <input type="time" name="departure_time" id="departure_time" required>
+                    </div>
+                    <div>
+                        <label for="arrival_time">Arrival Time (HH:MM)</label>
+                        <input type="time" name="arrival_time" id="arrival_time" required>
+                    </div>
+                    <div>
+                        <label for="class">Class</label>
+                        <select name="class" id="class" required>
+                            {% for option in unique_values.class %}
+                                <option value="{{ option }}">{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="stops">Stops</label>
+                        <select name="stops" id="stops" required>
+                            {% for option in unique_values.stops %}
+                                <option value="{{ option }}">{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <button type="submit">Predict Fare</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

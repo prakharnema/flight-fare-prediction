@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Fare Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Flight Fare Prediction</h1>
+        </div>
+        <div class="prediction-result">
+            <p style="font-size: 2em; font-weight: bold; text-align: center;">
+                {{ prediction }}
+            </p>
+        </div>
+        <div class="back-button" style="text-align: center;">
+            <a href="/" style="color: #f77f00; font-size: 18px;">Go Back to Search</a>
+        </div>
+    </div>
+</body>
+</html>
